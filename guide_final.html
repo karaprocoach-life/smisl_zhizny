@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>5 признаков, что ты не на своём месте — Кара Мадильхан</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  :root{
+    --bark:#2C1F14;--terracotta:#C17F5A;--terracotta-light:#E8C4AB;
+    --cream:#F7F2EB;--cream-dark:#EDE5D8;--muscat:#8B6E52;--muscat-light:#B8956F;
+    --font-d:'Cormorant Garamond',Georgia,serif;--font-u:'Inter',sans-serif;
+  }
+  html{scroll-behavior:smooth;}
+  body{background:var(--cream);color:var(--bark);font-family:var(--font-u);
+       -webkit-font-smoothing:antialiased;font-size:16px;line-height:1.75;}
+  .wrap{max-width:660px;margin:0 auto;padding:0 1.5rem;}
+
+  /* HERO */
+  .hero{background:var(--bark);padding:72px 0 60px;text-align:center;}
+  .hero-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--terracotta);margin-bottom:1.25rem;display:block;}
+  .hero h1{font-family:var(--font-d);font-size:clamp(36px,6vw,60px);font-weight:400;
+    color:var(--cream);line-height:1.1;margin-bottom:1rem;}
+  .hero h1 em{font-style:italic;color:var(--terracotta);}
+  .hero-sub{font-size:15px;color:var(--muscat-light);max-width:440px;
+    margin:0 auto 2rem;}
+  .hero-badge{display:inline-block;font-size:11px;letter-spacing:0.12em;
+    text-transform:uppercase;color:rgba(247,242,235,0.5);
+    border:0.5px solid rgba(193,127,90,0.3);padding:6px 16px;}
+
+  /* INTRO */
+  .intro{padding:56px 0;border-bottom:0.5px solid rgba(193,127,90,0.2);}
+  .intro-grid{display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start;}
+  .intro-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--terracotta);margin-bottom:0.5rem;}
+  .intro-name{font-family:var(--font-d);font-size:26px;color:var(--bark);}
+  .intro-text p{font-size:15px;color:var(--muscat);line-height:1.8;margin-bottom:1rem;}
+  .intro-text p strong{color:var(--bark);font-weight:500;}
+  .how-label{display:inline-block;background:var(--terracotta);color:var(--cream);
+    font-size:9px;letter-spacing:0.18em;text-transform:uppercase;
+    padding:4px 12px;margin-bottom:1rem;}
+  .how-text{font-size:14px;color:var(--muscat);font-style:italic;}
+
+  /* ПРИЗНАКИ */
+  .signs{padding:16px 0;}
+  .sign{padding:48px 0;border-bottom:0.5px solid rgba(193,127,90,0.2);}
+  .sign:last-child{border-bottom:none;}
+  .sign-num{font-family:var(--font-d);font-size:80px;font-weight:500;
+    color:rgba(193,127,90,0.15);line-height:1;margin-bottom:-0.25rem;display:block;}
+  .sign-tag{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+    color:var(--terracotta);margin-bottom:0.75rem;display:block;}
+  .sign h2{font-family:var(--font-d);font-size:clamp(24px,4vw,36px);
+    color:var(--bark);line-height:1.15;margin-bottom:1.25rem;}
+  .sign-main{font-family:var(--font-d);font-style:italic;font-size:15px;
+    color:var(--muscat);line-height:1.7;margin-bottom:1.25rem;
+    border-left:2px solid var(--terracotta);padding-left:1.25rem;}
+  .sign p{font-size:15px;color:var(--muscat);line-height:1.8;margin-bottom:0.75rem;}
+  .sign-insight{background:var(--cream-dark);padding:1rem 1.25rem;
+    margin-top:1rem;font-size:14px;color:var(--bark);line-height:1.65;
+    border-left:2px solid var(--terracotta);}
+
+  /* ИТОГ */
+  .results{padding:56px 0;background:var(--cream-dark);margin:0 -1.5rem;}
+  .results-inner{padding:0 1.5rem;}
+  .results h2{font-family:var(--font-d);font-size:clamp(28px,5vw,42px);
+    color:var(--bark);margin-bottom:2rem;line-height:1.1;}
+  .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:rgba(193,127,90,0.2);margin-bottom:1.5rem;}
+  .result-item{background:var(--cream-dark);padding:1.5rem 1.25rem;}
+  .result-score{font-family:var(--font-d);font-size:32px;color:var(--terracotta);
+    margin-bottom:0.5rem;}
+  .result-label{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--bark);margin-bottom:0.5rem;font-weight:500;}
+  .result-text{font-size:13px;color:var(--muscat);line-height:1.6;}
+  .results-note{font-family:var(--font-d);font-style:italic;font-size:18px;
+    color:var(--bark);margin-top:1.5rem;line-height:1.5;}
+
+  /* CTA */
+  .cta-section{padding:64px 0;background:var(--bark);margin:0 -1.5rem;}
+  .cta-inner{padding:0 1.5rem;text-align:center;}
+  .cta-eyebrow{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--terracotta);margin-bottom:1.25rem;display:block;}
+  .cta-section h2{font-family:var(--font-d);font-size:clamp(28px,5vw,48px);
+    color:var(--cream);margin-bottom:0.75rem;line-height:1.1;}
+  .cta-section h2 em{font-style:italic;color:var(--terracotta);}
+  .cta-desc{font-size:15px;color:var(--muscat-light);max-width:440px;
+    margin:0 auto 1.5rem;line-height:1.7;}
+  .product-box{background:rgba(255,255,255,0.04);border:0.5px solid rgba(193,127,90,0.3);
+    padding:2rem;max-width:440px;margin:0 auto 2rem;text-align:left;}
+  .product-box ul{list-style:none;margin:1rem 0 1.5rem;}
+  .product-box li{font-size:14px;color:rgba(240,235,227,0.7);padding:0.4rem 0;
+    border-bottom:0.5px solid rgba(193,127,90,0.12);
+    display:flex;gap:0.75rem;line-height:1.5;}
+  .product-box li::before{content:'—';color:var(--terracotta);flex-shrink:0;}
+  .price-row{display:flex;align-items:baseline;gap:0.75rem;margin-bottom:1.5rem;}
+  .price-new{font-family:var(--font-d);font-size:42px;color:var(--cream);}
+  .price-cur{font-size:16px;color:var(--muscat-light);}
+  .price-old{font-size:16px;color:rgba(193,127,90,0.4);text-decoration:line-through;
+    font-family:var(--font-d);}
+
+  /* FORM */
+  .form-wrap{max-width:440px;margin:0 auto;}
+  .form-input{display:block;width:100%;padding:14px 16px;margin-bottom:10px;
+    font-family:var(--font-u);font-size:15px;font-weight:300;
+    background:rgba(247,242,235,0.1);border:0.5px solid rgba(193,127,90,0.3);
+    color:var(--cream);outline:none;border-radius:0;}
+  .form-input::placeholder{color:rgba(247,242,235,0.35);}
+  .form-input:focus{background:rgba(247,242,235,0.15);border-color:var(--terracotta);}
+  .form-btn{width:100%;background:var(--terracotta);color:var(--bark);
+    font-family:var(--font-u);font-size:11px;letter-spacing:0.2em;
+    text-transform:uppercase;font-weight:600;padding:16px;border:none;
+    cursor:pointer;transition:opacity .2s;margin-top:4px;}
+  .form-btn:hover{opacity:0.88;}
+  .form-note{font-size:11px;color:rgba(193,127,90,0.5);margin-top:0.75rem;
+    letter-spacing:0.06em;}
+  .success-msg{display:none;text-align:center;padding:1.5rem 0;}
+  .success-msg p:first-child{font-family:var(--font-d);font-size:28px;
+    color:var(--cream);margin-bottom:0.5rem;}
+  .success-msg p:last-child{font-size:14px;color:var(--muscat-light);}
+
+  /* FOOTER */
+  footer{background:var(--bark);padding:1.5rem 0;margin:0 -1.5rem;
+    border-top:0.5px solid rgba(193,127,90,0.15);}
+  .footer-inner{padding:0 1.5rem;display:flex;justify-content:space-between;
+    align-items:center;flex-wrap:wrap;gap:1rem;}
+  footer p{font-size:11px;color:var(--muscat);letter-spacing:0.06em;}
+  footer a{color:var(--terracotta);}
+
+  /* MOBILE */
+  @media(max-width:600px){
+    .intro-grid{grid-template-columns:1fr;}
+    .results-grid{grid-template-columns:1fr;}
+    .results,.cta-section,footer{margin:0 -1.25rem;}
+    .results-inner,.cta-inner,.footer-inner{padding:0 1.25rem;}
+    .wrap{padding:0 1.25rem;}
+    .sign-num{font-size:60px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HERO -->
+<section class="hero" style="margin:0 -1.5rem;">
+  <div class="wrap">
+    <span class="hero-eyebrow">Кара Мадильхан · Профориентолог · Алматы</span>
+    <h1><em>5 признаков,</em><br>что ты не на своём месте</h1>
+    <p class="hero-sub">Гайд для женщин 35–45</p>
+    <span class="hero-badge">Прочитай · Отметь · Сделай первый шаг</span>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-grid">
+    <div>
+      <p class="intro-label">Автор</p>
+      <p class="intro-name">Кара Мадильхан</p>
+    </div>
+    <div class="intro-text">
+      <p>Этот гайд — для тебя, если внутри давно что-то не так. Я сама была там, где ты. В 37 лет — стабильная работа, которая давила на грудь каждое утро. Внешне всё хорошо. Внутри — ощущение чужой жизни.</p>
+      <p>Сейчас помогаю пройти этот путь <strong>за одну встречу.</strong></p>
+    </div>
+  </div>
+  <div style="margin-top:2rem;padding:1.25rem;background:var(--cream-dark);border-left:2px solid var(--terracotta);">
+    <span class="how-label">Как читать</span>
+    <p class="how-text">Прочитай каждый признак. Отметь те, что откликаются. Если узнаёшь себя в 3 и более — это не случайность. Это сигнал, который стоит услышать.</p>
+  </div>
+</section>
+
+<!-- ПРИЗНАКИ -->
+<section class="signs">
+
+  <div class="sign">
+    <span class="sign-num">01</span>
+    <span class="sign-tag">Признак 1 из 5</span>
+    <h2>В воскресенье вечером<br>тебе уже плохо</h2>
+    <p class="sign-main">Тревога перед понедельником — это не слабость. Это сигнал.</p>
+    <p>Ты ложишься спать — и думаешь о завтрашнем дне с тяжестью. Не усталость. Именно тяжесть. Как будто впереди — обязаловка, а не твоя жизнь.</p>
+    <div class="sign-insight">«Устала от работы» и «эта работа не моя» — разные вещи. Усталость уходит после отдыха. Ощущение чужого — нет.</div>
+  </div>
+
+  <div class="sign">
+    <span class="sign-num">02</span>
+    <span class="sign-tag">Признак 2 из 5</span>
+    <h2>Ты хорошо делаешь работу —<br>но не горишь ею</h2>
+    <p class="sign-main">Компетентность без смысла — это тихое выгорание.</p>
+    <p>Тебя хвалят. Ты справляешься. Ты надёжная. Но когда спрашивают «тебе нравится?» — ты замолкаешь.</p>
+    <div class="sign-insight">«Нравится» и «умею» — это не одно и то же. Мастерство без интереса не даёт энергию — оно её забирает.</div>
+  </div>
+
+  <div class="sign">
+    <span class="sign-num">03</span>
+    <span class="sign-tag">Признак 3 из 5</span>
+    <h2>Ты завидуешь тем,<br>кто занимается «своим»</h2>
+    <p class="sign-main">Зависть — это замаскированное желание.</p>
+    <p>Ты видишь человека, который с огнём говорит о своём деле — и чувствуешь укол. Не злость. Именно укол.</p>
+    <div class="sign-insight">Зависть — это компас. Спроси себя: кому именно я завидую? Чему именно в них? Вот твой ответ.</div>
+  </div>
+
+  <div class="sign">
+    <span class="sign-num">04</span>
+    <span class="sign-tag">Признак 4 из 5</span>
+    <h2>Ты не можешь ответить:<br>«кем ты хочешь быть?»</h2>
+    <p class="sign-main">Не знаешь — честный ответ. Но не конечный.</p>
+    <p>Тебе задают вопрос — и ты теряешься. Или говоришь: «хочу помогать людям», «что-то творческое».</p>
+    <div class="sign-insight">Незнание — не приговор. Это отправная точка. С неё как раз начинается путь к себе.</div>
+  </div>
+
+  <div class="sign">
+    <span class="sign-num">05</span>
+    <span class="sign-tag">Признак 5 из 5</span>
+    <h2>Ты думаешь:<br>«Уже поздно. Мне не 20 лет»</h2>
+    <p class="sign-main">40 — это не финал. Это середина.</p>
+    <p>Эта мысль — самая дорогая ловушка. Звучит как мудрость, но это страх, одетый в рациональность.</p>
+    <div class="sign-insight">Мои клиентки в 38–45 меняют профессию и запускают проекты. Жалеют лишь об одном: «Что не сделала это раньше».</div>
+  </div>
+
+</section>
+
+<!-- ИТОГ -->
+<section class="results" style="margin:0 -1.5rem;">
+  <div class="results-inner wrap">
+    <h2>Сколько признаков<br>ты отметила?</h2>
+    <div class="results-grid">
+      <div class="result-item">
+        <div class="result-score">1–2</div>
+        <div class="result-label">Сигнал есть</div>
+        <p class="result-text">Возможно, просто устала. Или что-то начинает меняться внутри.</p>
+      </div>
+      <div class="result-item">
+        <div class="result-score">3–4</div>
+        <div class="result-label">Пора смотреть</div>
+        <p class="result-text">Запрос на перемены. Он заслуживает твоего внимания.</p>
+      </div>
+      <div class="result-item">
+        <div class="result-score">5</div>
+        <div class="result-label">Ты уже знаешь</div>
+        <p class="result-text">Ты давно знаешь ответ. Осталось дать себе разрешение назвать его.</p>
+      </div>
+    </div>
+    <p class="results-note">Признание — это уже половина пути.<br>Вторая половина — решиться сделать первый шаг.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" style="margin:0 -1.5rem;">
+  <div class="cta-inner wrap">
+    <span class="cta-eyebrow">Следующий шаг</span>
+    <h2>Разбор личности —<br><em>одна встреча</em></h2>
+    <p class="cta-desc">60–90 минут онлайн. Уйдёшь с ясностью и конкретным планом на ближайшие 3 месяца.</p>
+
+    <div class="product-box">
+      <ul>
+        <li>Анализ твоих сильных сторон и ресурсов</li>
+        <li>2–3 конкретных направления для движения</li>
+        <li>Понимание с чего именно начать</li>
+        <li>Ясность вместо хаоса «не знаю куда»</li>
+      </ul>
+      <div class="price-row">
+        <span class="price-new">16 000</span>
+        <span class="price-cur">₸</span>
+        <span class="price-old">25 000 ₸</span>
+      </div>
+      <p style="font-size:13px;color:var(--muscat-light);margin-bottom:1.5rem;">
+        Это вложение в твоё будущее — а значит, и в будущее твоей семьи.
+      </p>
+
+      <!-- ФОРМА -->
+      <form id="guideForm" class="form-wrap" action="https://formspree.io/f/mdabrojb" method="POST">
+        <input type="hidden" name="_subject" value="Заявка с гайда — Кара Мадильхан"/>
+        <input class="form-input" type="text" name="name" required placeholder="Твоё имя"/>
+        <input class="form-input" type="text" name="contact" required placeholder="Instagram или WhatsApp"/>
+        <button class="form-btn" type="submit">Записаться на разбор</button>
+      </form>
+      <div class="success-msg" id="guideSuccess">
+        <p>Заявка отправлена ✓</p>
+        <p>Напишу тебе в ближайшее время</p>
+      </div>
+      <p class="form-note" style="text-align:center;">или напиши в Instagram: @kara_happylife</p>
+    </div>
+
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;
+       color:var(--cream);max-width:400px;margin:0 auto;line-height:1.5;">
+      «Я потратила 3 года, чтобы найти себя.<br>Ты сделаешь это за одну встречу.»
+    </p>
+    <p style="font-size:12px;color:var(--muscat);margin-top:0.5rem;">— Кара Мадильхан</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="margin:0 -1.5rem;">
+  <div class="footer-inner wrap">
+    <p>© Кара Мадильхан · Все права защищены</p>
+    <p><a href="https://www.instagram.com/kara_happylife" target="_blank">@kara_happylife</a></p>
+  </div>
+</footer>
+
+</div><!-- /wrap -->
+
+<script>
+  const guideForm = document.getElementById('guideForm');
+  if (guideForm) {
+    guideForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = guideForm.querySelector('button');
+      btn.textContent = 'Отправляю...'; btn.disabled = true;
+      try {
+        const res = await fetch('https://formspree.io/f/mdabrojb', {
+          method: 'POST',
+          headers: {'Accept': 'application/json'},
+          body: new FormData(guideForm)
+        });
+        if (res.ok) {
+          guideForm.style.display = 'none';
+          document.getElementById('guideSuccess').style.display = 'block';
+        } else { btn.textContent = 'Ошибка — попробуй ещё раз'; btn.disabled = false; }
+      } catch { btn.textContent = 'Ошибка — попробуй ещё раз'; btn.disabled = false; }
+    });
+  }
+</script>
+</body>
+</html>
